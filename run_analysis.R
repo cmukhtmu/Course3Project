@@ -61,14 +61,14 @@ run_analysis <- function() {
     preTidyData = merge(Activity_Labels, mean_std_activity_data, by="ActivityID")
     
     TidyData1 = cbind(Total_Subject, preTidyData)
-    write.csv(TidyData1, "TidyData1.csv", row.names = FALSE)
-    print("First tidy dataset written successfully: TidyData1.csv")
+    write.table(TidyData1, "TidyData1.txt", row.names = FALSE)
+    print("First tidy dataset written successfully: TidyData1.txt")
     
     
     # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
     TidyData2 = TidyData1[,-2]
     TidyData2 = TidyData2 %>% group_by(SubjectID,ActivityLabel) %>% summarise_all(mean)
-    write.csv(TidyData2, "TidyData2.csv", row.names = FALSE)
-    print("Second tidy dataset written successfully: TidyData2.csv")
+    write.table(TidyData2, "TidyData2.txt", row.names = FALSE)
+    print("Second tidy dataset written successfully: TidyData2.txt")
     print("***  E N D   O F   P R O G R A M  ***")
 }
