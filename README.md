@@ -31,7 +31,7 @@ run_analysis()
 
 The script assumes that all the data files are present in the folder named UCI HAR Dataset, in the root of the directory.
 
-At the end of the script, it will produce two CSV files, called TidyData1.csv and TidyData2.csv (also included in this repo) corresponding to the requirements of the project. Please see Requirements section.
+At the end of the script, it will produce two TXT files, called TidyData1.txt and TidyData2.txt (also included in this repo) corresponding to the requirements of the project. Please see Requirements section.
 
 You can also load the tidy data sets in R using the following two commands:
 
